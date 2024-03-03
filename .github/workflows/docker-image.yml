@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop  # Adicione a branch de desenvolvimento aqui
+  pull_request:
+    branches:
+      - main
+      - develop  # Adicione a branch de desenvolvimento aqui
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag master-app-app:$(date +%s)
