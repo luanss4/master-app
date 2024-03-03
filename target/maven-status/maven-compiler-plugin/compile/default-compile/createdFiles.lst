@@ -1,2 +1,4 @@
+br\meu\cliente\masterapp\controller\UserController.class
 br\meu\cliente\masterapp\MasterAppApplication.class
-ClienteController.class
+br\meu\cliente\masterapp\model\User.class
+br\meu\cliente\masterapp\repository\UserRepository.class
